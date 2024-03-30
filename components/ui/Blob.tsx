@@ -1,7 +1,7 @@
 import React from "react";
 
 interface BlobProps {
-  className?: string;
+  className: string;
 }
 function Blob({ className }: BlobProps) {
   return <div className={className} />;

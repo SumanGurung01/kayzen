@@ -31,4 +31,8 @@ h6 {
     .bg-gradient-active {
         @apply bg-gradient-to-r from-[#fe4fec] to-[#f1b882]
     }
+
+    .gradient-text {
+        @apply bg-gradient bg-clip-text text-transparent
+    }
 }

@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import Logo from "@/assets/logo.png";
 import { Menu, MoonStar, Sun } from "lucide-react";
-import Button from "./ui/Button";
 
 {
   /*list of links in navbar*/
@@ -50,16 +49,12 @@ function Navbar() {
           id="navbar-buttons-text"
           className="md:center lg:center hidden gap-4"
         >
-          <Button type="outline" className="w-36 rounded-md py-1">
+          <button className="w-36 rounded-md border-2 border-pink-500 py-2">
             Start a free trial
-          </Button>
-
-          <Button
-            type="filled"
-            className="bg-gradient active:bg-gradient-active w-36 rounded-md py-1 text-zinc-100"
-          >
+          </button>
+          <button className="active:bg-gradient-active bg-gradient w-36 rounded-md py-2 text-zinc-100">
             Sign In
-          </Button>
+          </button>
         </div>
 
         {/* buttons (only icons) */}
