@@ -70,7 +70,7 @@ function Feature() {
 
       {/* Floating Gradient Blob */}
       <Blob className="absolute left-[0px] top-[600px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-pink-500 opacity-15 blur-3xl lg:block" />
-      <Blob className="absolute right-[0px] top-[600px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-blue-500 opacity-20 blur-3xl lg:block" />
+      <Blob className="absolute right-[0px] top-[600px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-blue-500 opacity-15 blur-3xl lg:block" />
     </div>
   );
 }
