@@ -69,7 +69,7 @@ function Hero() {
       </main>
 
       {/* div containing trusted companies*/}
-      <section id="hero-trusted-companies" className="center mt-60 flex-col">
+      <section id="hero-trusted-companies" className="center mt-40 flex-col">
         <h1 className="text-xl font-semibold">
           Trusted by these leading companies
         </h1>
