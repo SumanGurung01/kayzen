@@ -15,7 +15,7 @@ function Feature() {
       </div>
 
       {/* Main containing feature card */}
-      <main className="no-scrollbar relative mb-10 flex h-[80vh] justify-around gap-10 overflow-scroll pb-40">
+      <main className="no-scrollbar relative mb-10 flex justify-around gap-10 overflow-scroll pb-40">
         {/* Feature 1 */}
         <div
           id="feature-phone-agent"
