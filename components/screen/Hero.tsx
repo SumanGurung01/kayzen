@@ -16,7 +16,7 @@ const features = [
 function Hero() {
   return (
     <>
-      <main className="relative mt-10 lg:flex">
+      <main className="relative mt-20 lg:flex">
         {/* div containing text*/}
         <div id="hero-text" className="lg:w-[50%]">
           {/* hero text */}
