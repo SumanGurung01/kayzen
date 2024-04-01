@@ -4,7 +4,7 @@ import { features } from "@/utlis/constant";
 
 function Integration() {
   return (
-    <main id="integrations" className="center mt-40 flex-col">
+    <main id="integrations" className="center mt-2 flex-col pt-8">
       {/* Integration heading */}
       <h1 className="w-full max-w-xl text-center text-3xl font-bold md:text-4xl">
         Direct <span className="gradient-text">integrations</span> with your
