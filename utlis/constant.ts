@@ -27,3 +27,42 @@ export const personalizationSteps = [
       "Embed the chatbot on as many sites you want. Track, analyze and collect informations for lead gen or solving queries.",
   },
 ];
+
+/* Pricings details */
+export const pricings = [
+  {
+    catagory: "Starter",
+    price: 8,
+    type: "free",
+    features: [
+      "Upto 4k messages per month",
+      "Upto 200 training web pages",
+      "10 file uploads",
+      "Upto 10 MB per file",
+    ],
+  },
+  {
+    catagory: "Growth",
+    price: 16,
+    type: "starter",
+    features: [
+      "2 chatbots",
+      "Upto 10k messages per month",
+      "Upto 2,000 training web pages",
+      "100 file uploads",
+      "Unlimited integrations",
+    ],
+  },
+  {
+    catagory: "Scale",
+    price: 40,
+    type: "business",
+    features: [
+      "5 chatbots",
+      "Upto 40k messages per month",
+      "Upto 10,000 training web pages",
+      "API access",
+      "Webhook support",
+    ],
+  },
+];
