@@ -1,6 +1,8 @@
 import Feature from "@/components/screen/Feature";
 import Hero from "@/components/screen/Hero";
+import Integration from "@/components/screen/Integration";
 import Personalize from "@/components/screen/Personalize";
+import Pricing from "@/components/screen/Pricing";
 import Solution from "@/components/screen/Solution";
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
       <Feature />
       <Personalize />
       <Solution />
+      <Integration />
+      <Pricing />
     </>
   );
 }
