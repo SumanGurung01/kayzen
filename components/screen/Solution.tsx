@@ -1,10 +1,10 @@
 import { Headset, Mail, PieChart, SquareTerminal } from "lucide-react";
 import React from "react";
 
-import Solution1 from "@/assets/solution-1.gif";
-import Solution2 from "@/assets/solution-2.gif";
-import Solution3 from "@/assets/solution-3.gif";
-import Solution5 from "@/assets/solution-5.gif";
+import Solution1 from "@/assets/solution-assets/solution-1.gif";
+import Solution2 from "@/assets/solution-assets/solution-2.gif";
+import Solution3 from "@/assets/solution-assets/solution-3.gif";
+import Solution5 from "@/assets/solution-assets/solution-5.gif";
 import Image from "next/image";
 import Blob from "../ui/Blob";
 
