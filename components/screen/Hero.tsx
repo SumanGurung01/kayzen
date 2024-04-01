@@ -58,7 +58,7 @@ function Hero() {
         </div>
 
         {/* div containing gif*/}
-        <div id="hero-gif" className="center m-10 lg:w-[50%]">
+        <div id="hero-gif" className="center lg:mt-[-100px] lg:w-[50%]">
           <Image src={MainGif} alt="hero gif" className="w-full max-w-xl" />
         </div>
 
