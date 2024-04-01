@@ -5,7 +5,7 @@ const personalizationSteps = [
     step: 1,
     heading: "Sync Training Data",
     content:
-      "Upload txt, wordx file, web URLs, Youtube Video URL, and drop in raw text content for kayzen to understand what you need.",
+      "Upload txt, word file, web URLs, youtube video URL, and drop in raw text content for kayzen to understand what you need.",
   },
 
   {
@@ -18,7 +18,7 @@ const personalizationSteps = [
     step: 3,
     heading: "Install on your Site",
     content:
-      "Embed the Chatbot on as many sites you want. Track, analyze and collect informations for Lead Gen or Solving Queries.",
+      "Embed the chatbot on as many sites you want. Track, analyze and collect informations for lead gen or solving queries.",
   },
 ];
 
