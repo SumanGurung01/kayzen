@@ -3,8 +3,8 @@ import React from "react";
 import { CircleCheck } from "lucide-react";
 import Blob from "../ui/Blob";
 
-import MainGif from "@/assets/gif1.gif";
-import Company from "@/assets/smart-it-logo.png";
+import HeroGif from "@/assets/hero-assets/hero.gif";
+import Company from "@/assets/trusted-company-assets/smart-it-logo.png";
 
 /* list containing features */
 const features = [
@@ -59,7 +59,7 @@ function Hero() {
 
         {/* div containing gif*/}
         <div id="hero-gif" className="center lg:mt-[-100px] lg:w-[50%]">
-          <Image src={MainGif} alt="hero gif" className="w-full max-w-xl" />
+          <Image src={HeroGif} alt="hero gif" className="w-full max-w-xl" />
         </div>
 
         {/* floating gradient blobs */}

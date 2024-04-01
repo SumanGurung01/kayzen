@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import Feature1 from "@/assets/feature-1.png";
-import Feature2 from "@/assets/feature-2.gif";
-import Feature3 from "@/assets/feature-3.gif";
-import Kayzen from "@/assets/logo.png";
+import Feature1 from "@/assets/feature-assets/feature-1.png";
+import Feature2 from "@/assets/feature-assets/feature-2.gif";
+import Feature3 from "@/assets/feature-assets/feature-3.gif";
+import Kayzen from "@/assets/kayzen-assets/logo.png";
 import Blob from "../ui/Blob";
 
 function Feature() {

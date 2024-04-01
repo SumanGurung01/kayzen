@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Logo from "@/assets/logo.png";
+import Kayzen from "@/assets/kayzen-assets/logo.png";
 import { Menu, MoonStar, Sun } from "lucide-react";
 
 {
@@ -28,7 +28,7 @@ function Navbar() {
     <nav className="center justify-between py-4">
       {/* div containing logo and name */}
       <div id="navbar-logo" className="center">
-        <Image src={Logo} alt="Kayzen Logo" className="w-10" />
+        <Image src={Kayzen} alt="Kayzen Logo" className="w-10" />
         <h1 className="ml-2 text-2xl font-bold">KAYZEN</h1>
       </div>
 
