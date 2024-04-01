@@ -6,12 +6,7 @@ import Blob from "../ui/Blob";
 import HeroGif from "@/assets/hero-assets/hero.gif";
 import Company from "@/assets/trusted-company-assets/smart-it-logo.png";
 
-/* list containing features */
-const features = [
-  "7 Days free Trial",
-  "No Credit Card Required",
-  "Cancel Anytime",
-];
+import { features } from "@/utlis/constant";
 
 function Hero() {
   return (
