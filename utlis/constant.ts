@@ -66,3 +66,28 @@ export const pricings = [
     ],
   },
 ];
+
+/* All testimonials */
+export const testimonials = [
+  {
+    image: "#",
+    name: "Floyd Miles",
+    description:
+      "Kayzen appears to be first really production ready support aolution that allows custom training, while so many other break or simply lack functionality",
+    rating: 4.5,
+  },
+  {
+    image: "#",
+    name: "Ronald Richards",
+    description:
+      "Other than obvious benefits of using KAYZEN, we are getting user feedback/feature request - it's only day 1 of using the KAYZEN bot",
+    rating: 4,
+  },
+  {
+    image: "#",
+    name: "Savannah Nguyen",
+    description:
+      "Even now and then, you stumble on a great solution, KAYZEN is like i imagined a chatbot solution could be a few years back",
+    rating: 4.5,
+  },
+];
