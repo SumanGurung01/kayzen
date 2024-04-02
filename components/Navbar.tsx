@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Kayzen from "@/assets/kayzen-assets/logo.png";
-import { Menu, MoonStar, Sun } from "lucide-react";
+import { Menu, MoonStar, Sun, X } from "lucide-react";
 
 {
   /*list of links in navbar*/
@@ -24,8 +24,10 @@ const links = [
 ];
 
 function Navbar() {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <nav className="center justify-between py-4">
+    <nav className="center relative justify-between py-4">
       {/* div containing logo and name */}
       <div id="navbar-logo" className="center">
         <Image src={Kayzen} alt="Kayzen Logo" className="w-10" />
@@ -63,8 +65,38 @@ function Navbar() {
           {/* <Sun /> */}
         </button>
 
-        <button className="lg:hidden">
+        <button className="lg:hidden" onClick={() => setShowSidebar(true)}>
           <Menu />
+        </button>
+      </div>
+
+      {/* sidebar div */}
+      <div
+        id="sidebar"
+        className={`absolute ${showSidebar ? "block" : "hidden"} right-0 top-0 z-10 flex w-80 flex-col gap-2 bg-white p-4 text-xl shadow-xl`}
+        onClick={() => setShowSidebar(false)}
+      >
+        <a className="my-2 duration-200 hover:text-pink-500" href="#features">
+          Features
+        </a>
+        <a
+          className="my-2 duration-200 hover:text-pink-500"
+          href="#integrations"
+        >
+          Integrations
+        </a>
+        <a className="my-2 duration-200 hover:text-pink-500" href="#pricing">
+          Pricings
+        </a>
+        <a className="my-2 duration-200 hover:text-pink-500">
+          Start a free trial
+        </a>
+        <a className="my-2 duration-200 hover:text-pink-500">Sign In</a>
+        <button
+          onClick={() => setShowSidebar(false)}
+          className="absolute right-0 top-0 p-4"
+        >
+          <X />
         </button>
       </div>
     </nav>
