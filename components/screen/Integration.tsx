@@ -19,7 +19,7 @@ function Integration() {
         {/* map each feature and return feature */}
         {features.map((feature) => (
           <div className="center mr-4 items-start gap-1 md:mr-8" key={feature}>
-            <CircleCheck size={16} className="" />
+            <CircleCheck size={16} />
             <p>{feature}</p>
           </div>
         ))}
