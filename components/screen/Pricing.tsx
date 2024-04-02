@@ -5,7 +5,7 @@ import Blob from "../ui/Blob";
 
 function Pricing() {
   return (
-    <main id="pricing" className="center relative mt-40 flex-col">
+    <main id="pricing" className="center relative mt-28 flex-col pt-12">
       {/* Main heading */}
       <h1 className="mb-20 w-full max-w-xl text-center text-3xl font-bold md:text-4xl">
         Pays for itself in <span className="gradient-text">saved</span> support
