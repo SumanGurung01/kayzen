@@ -4,6 +4,7 @@ import Integration from "@/components/screen/Integration";
 import Personalize from "@/components/screen/Personalize";
 import Pricing from "@/components/screen/Pricing";
 import Solution from "@/components/screen/Solution";
+import Testimonials from "@/components/screen/Testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Solution />
       <Integration />
       <Pricing />
+      <Testimonials />
     </>
   );
 }
