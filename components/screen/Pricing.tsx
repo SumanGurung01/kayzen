@@ -81,7 +81,7 @@ function PricingCard({ catagory, price, type, features }: PricingCardProps) {
 
         {/* map througe each feature and return them */}
         {features.map((feature) => (
-          <div className="center my-3 justify-start gap-4">
+          <div className="center my-3 justify-start gap-4" key={feature}>
             <Check size={14} color="green" />
             <p>{feature}</p>
           </div>
