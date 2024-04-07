@@ -30,11 +30,11 @@ function Integration() {
 
       {/* Integration buttons */}
       <div className="flex gap-10">
-        <button className="active:bg-gradient-active bg-gradient w-40 rounded-md py-2 text-white">
+        <button className="active:bg-gradient-active bg-gradient w-40 rounded-xl py-2 text-white">
           Start a free trial
         </button>
 
-        <button className="w-40 rounded-md border-2 border-pink-500 bg-white py-2">
+        <button className="w-40 rounded-xl border-2 border-pink-500 bg-white py-2">
           Book a demo
         </button>
       </div>

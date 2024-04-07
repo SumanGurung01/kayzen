@@ -5,6 +5,8 @@ import Solution1 from "@/assets/solution-assets/solution-1.gif";
 import Solution2 from "@/assets/solution-assets/solution-2.gif";
 import Solution3 from "@/assets/solution-assets/solution-3.gif";
 import Solution5 from "@/assets/solution-assets/solution-5.gif";
+import Pie from "@/assets/solution-assets/pie.gif";
+import Email from "@/assets/solution-assets/email.gif";
 import Image from "next/image";
 import Blob from "../ui/Blob";
 
@@ -15,7 +17,7 @@ function Solution() {
       id="features"
     >
       {/* Solution 1*/}
-      <div className="relative col-span-4 my-10 w-[350px] flex-shrink-0 rounded-lg border-2 border-pink-500 bg-white md:w-full">
+      <div className="relative col-span-4 my-10 w-[350px] flex-shrink-0 rounded-3xl border-2 border-pink-500 bg-white md:w-full">
         <div className="p-4 md:w-[60%]">
           <Image
             src={Solution1}
@@ -24,7 +26,7 @@ function Solution() {
           />
 
           <section className="center my-4 justify-start gap-3">
-            <Headset />
+            <Headset color="violet" />
 
             <h1 className="gradient-text text-lg font-bold md:text-2xl">
               PERSONALIZED SUPPORT BOT
@@ -45,7 +47,7 @@ function Solution() {
       </div>
 
       {/* Solution 2*/}
-      <div className="relative col-span-3 my-10 w-[350px] flex-shrink-0 rounded-lg border-2 border-pink-500 bg-white p-4 md:w-full">
+      <div className="relative col-span-3 my-10 w-[350px] flex-shrink-0 rounded-3xl border-2 border-pink-500 bg-white p-4 md:w-full">
         <Image
           src={Solution2}
           alt="solution image"
@@ -53,7 +55,7 @@ function Solution() {
         />
 
         <section className="center my-4 justify-start gap-3">
-          <PieChart />
+          <Image src={Pie} alt="pie" className="m-[-10px] w-14" />
 
           <h1 className="gradient-text text-lg font-bold md:text-2xl">
             DASHBOARD
@@ -72,7 +74,7 @@ function Solution() {
       </div>
 
       {/* Solution 3*/}
-      <div className="relative col-span-3 col-start-2 my-10 w-[350px] flex-shrink-0 rounded-lg border-2 border-pink-500 bg-white p-4 md:w-full">
+      <div className="relative col-span-3 col-start-2 my-10 w-[350px] flex-shrink-0 rounded-3xl border-2 border-pink-500 bg-white p-4 md:w-full">
         <Image
           src={Solution3}
           alt="solution image"
@@ -80,7 +82,7 @@ function Solution() {
         />
 
         <section className="center my-4 justify-start gap-3">
-          <Mail />
+          <Image src={Email} alt="email" className="w-8" />
 
           <h1 className="gradient-text text-lg font-bold md:text-2xl">
             EMAIL SUMMARIES
@@ -99,11 +101,11 @@ function Solution() {
       </div>
 
       {/* Solution 4*/}
-      <div className="col-span-2 my-10 w-[350px] flex-shrink-0 rounded-lg border-2 border-pink-500 bg-white p-4 md:w-full">
+      <div className="col-span-2 my-10 w-[350px] flex-shrink-0 rounded-3xl border-2 border-pink-500 bg-white p-4 md:w-full">
         <Image src={Solution3} alt="solution image" className="mx-auto w-60" />
 
         <section className="center my-4 justify-start gap-3">
-          <Headset />
+          <Headset color="violet" />
 
           <h1 className="gradient-text text-lg font-bold md:text-2xl">
             HUMAN ASSITANCE
@@ -122,7 +124,7 @@ function Solution() {
       </div>
 
       {/* Solution 5*/}
-      <div className="col-span-2 my-10 w-[350px] flex-shrink-0 rounded-lg border-2 border-pink-500 bg-white p-4 md:w-full">
+      <div className="col-span-2 my-10 w-[350px] flex-shrink-0 rounded-3xl border-2 border-pink-500 bg-white p-4 md:w-full">
         <Image
           src={Solution5}
           alt="solution image"
@@ -130,7 +132,7 @@ function Solution() {
         />
 
         <section className="center my-4 justify-start gap-3">
-          <SquareTerminal />
+          <SquareTerminal color="violet" />
 
           <h1 className="gradient-text text-lg font-bold md:text-2xl">
             QUICK PROMPTS

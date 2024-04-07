@@ -11,12 +11,13 @@ import { features } from "@/utlis/constant";
 function Hero() {
   return (
     <>
-      <main className="relative mt-20 lg:flex">
+      <main className="lg relative mt-20 justify-center lg:flex">
         {/* div containing text*/}
-        <div id="hero-text" className="lg:w-[50%]">
+        <div id="hero-text" className="lg:w-[40%]">
           {/* hero text */}
           <h1 className="my-10 text-center text-3xl font-semibold md:text-5xl lg:text-start lg:text-7xl">
-            Boost Sales & Satisfaction
+            <span className="underline decoration-lime-600">Boost Sales</span> &{" "}
+            <span className="underline decoration-lime-600">Satisfaction</span>
           </h1>
           <p className="text-center text-xl font-semibold md:text-2xl  lg:my-10 lg:text-start lg:text-3xl">
             Your All-in-One AI Solution for<br></br>
@@ -41,19 +42,19 @@ function Hero() {
           </div>
 
           {/* hero buttons */}
-          <div className="center gap-10 lg:justify-start">
-            <button className="active:bg-gradient-active bg-gradient w-40 rounded-md py-2 text-white">
+          <div className="center gap-10 lg:ml-20 lg:justify-start">
+            <button className="active:bg-gradient-active bg-gradient w-40 rounded-xl py-2 text-white">
               Start a free trial
             </button>
 
-            <button className="w-40 rounded-md border-2 border-pink-500 bg-white py-2">
+            <button className="w-40 rounded-xl border-2 border-pink-500 bg-white py-2">
               Book a free demo
             </button>
           </div>
         </div>
 
         {/* div containing gif*/}
-        <div id="hero-gif" className="center lg:mt-[-100px] lg:w-[50%]">
+        <div id="hero-gif" className="center lg:mt-[-100px] lg:w-[40%]">
           <Image src={HeroGif} alt="hero gif" className="w-full max-w-xl" />
         </div>
 

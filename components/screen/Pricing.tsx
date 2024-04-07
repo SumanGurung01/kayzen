@@ -7,7 +7,7 @@ function Pricing() {
   return (
     <main id="pricing" className="center relative mt-28 flex-col pt-12">
       {/* Main heading */}
-      <h1 className="mb-20 w-full max-w-xl text-center text-3xl font-bold md:text-4xl">
+      <h1 className="mb-20 w-full max-w-xl text-center text-3xl font-bold md:text-4xl lg:mb-40">
         Pays for itself in <span className="gradient-text">saved</span> support
         time
       </h1>
@@ -49,11 +49,11 @@ function PricingCard({ catagory, price, type, features }: PricingCardProps) {
   return (
     <section
       id="pricing-card"
-      className="w-full rounded-lg border-[1px] border-zinc-300 bg-white shadow-md md:w-96 lg:w-80"
+      className={`w-full rounded-3xl border-[1px] border-zinc-300 bg-white shadow-md md:w-96 lg:w-80 ${catagory === "Growth" ? "lg:mt-[-40px]" : ""}`}
     >
       {/* if catagory is growth only then show most popular tagline */}
       {catagory === "Growth" ? (
-        <div className="bg-gradient center gap-4 rounded-t-md p-2 text-lg text-white">
+        <div className="bg-gradient center gap-4 rounded-t-3xl p-2 text-lg text-white">
           <p>Most Popular</p>
           <Sparkles size={20} />
         </div>

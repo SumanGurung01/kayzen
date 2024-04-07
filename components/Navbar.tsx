@@ -34,27 +34,30 @@ function Navbar() {
         <h1 className="ml-2 text-2xl font-bold">KAYZEN</h1>
       </div>
 
-      {/* div containing links */}
-      <div id="navbar-links" className="lg:center hidden gap-10">
-        {/* map through each links and return <a> tag */}
-        {links.map((link) => (
-          <a href={link.href} key={link.href} className="font-semibold">
-            {link.text}
-          </a>
-        ))}
-      </div>
-
       {/* div containing buttons (text and icons) */}
       <div id="navbar-buttons" className="center gap-6">
+        {/* div containing links */}
+        <div
+          id="navbar-links"
+          className="lg:center hidden gap-10 md:mr-10 lg:mr-28 xl:mr-36"
+        >
+          {/* map through each links and return <a> tag */}
+          {links.map((link) => (
+            <a href={link.href} key={link.href} className="font-semibold">
+              {link.text}
+            </a>
+          ))}
+        </div>
+
         {/* div containing buttons (only text) */}
         <div
           id="navbar-buttons-text"
           className="md:center lg:center hidden gap-4"
         >
-          <button className="w-36 rounded-md border-2 border-pink-500 py-2">
+          <button className="w-36 rounded-xl border-2 border-pink-500 py-2">
             Start a free trial
           </button>
-          <button className="active:bg-gradient-active bg-gradient w-36 rounded-md py-2 text-zinc-100">
+          <button className="active:bg-gradient-active bg-gradient w-36 rounded-xl py-2 text-zinc-100">
             Sign In
           </button>
         </div>

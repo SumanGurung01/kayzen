@@ -1,9 +1,10 @@
 import React from "react";
 import { testimonials } from "@/utlis/constant";
+import Blob from "../ui/Blob";
 
 function Testimonials() {
   return (
-    <main id="testimonials" className="lg:center mt-40 flex-col">
+    <main id="testimonials" className="lg:center relative mt-40 flex-col">
       {/* div containing heading */}
       <div className="center">
         <h1 className="mb-20 w-full max-w-xl text-center text-3xl font-bold md:text-4xl">
@@ -28,6 +29,11 @@ function Testimonials() {
           );
         })}
       </div>
+
+      {/* floating gradient blobs */}
+      <Blob className="absolute right-0 top-[100px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-pink-500 opacity-10 blur-3xl lg:block" />
+
+      <Blob className="absolute left-[-150px] top-[-100px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-blue-500 opacity-5 blur-3xl lg:block" />
     </main>
   );
 }
@@ -50,7 +56,7 @@ function TestimonialCard({
   return (
     <section
       id="testimonial-card"
-      className="w-full max-w-96 flex-shrink-0 rounded-md border-[1px] border-zinc-300 p-4 shadow-md"
+      className="w-full max-w-96 flex-shrink-0 rounded-md border-[1px] border-zinc-300 bg-white p-4 shadow-md"
     >
       <div className="flex justify-between">
         <div className="h-20 w-20 bg-zinc-300"></div>

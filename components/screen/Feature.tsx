@@ -15,11 +15,11 @@ function Feature() {
       </div>
 
       {/* Main containing feature card */}
-      <main className="center relative mb-10 flex-col gap-10 overflow-hidden pb-40 lg:flex-row lg:justify-around">
+      <main className="center relative mb-10 flex-col gap-20 overflow-hidden pb-40 lg:flex-row">
         {/* Feature 1 */}
         <div
           id="feature-phone-agent"
-          className="mb-16 w-full rounded-md border-2 border-pink-500 p-5 md:max-w-xl lg:mb-0 lg:h-96 lg:max-w-72"
+          className="mb-16 w-full rounded-2xl border-2 border-pink-500 bg-white p-5 md:max-w-xl lg:mb-0 lg:h-96 lg:max-w-72"
         >
           <h1 className="mb-2 text-2xl font-semibold">Phone Agent</h1>
           <div className="relative flex lg:flex-col">
@@ -38,7 +38,7 @@ function Feature() {
         {/* Feature 2 */}
         <div
           id="feature-chat-agent"
-          className="mb-16 w-full rounded-md border-2 border-pink-500 p-5 md:max-w-xl lg:mb-0 lg:h-96 lg:max-w-72"
+          className="mb-16 w-full rounded-2xl border-2 border-pink-500 bg-white p-5 md:max-w-xl lg:mb-0 lg:h-96 lg:max-w-72"
         >
           <h1 className="mb-2 text-2xl font-semibold">Chat Agent</h1>
           <div className="relative flex lg:flex-col">
@@ -57,7 +57,7 @@ function Feature() {
         {/* Feature 3 */}
         <div
           id="feature-email-agent"
-          className="mb-16 w-full rounded-md border-2 border-pink-500 p-5 md:max-w-xl lg:mb-0 lg:h-96 lg:max-w-72"
+          className="mb-16 w-full rounded-2xl border-2 border-pink-500 bg-white p-5 md:max-w-xl lg:mb-0 lg:h-96 lg:max-w-72"
         >
           <h1 className="mb-2 text-2xl font-semibold">Email Agent</h1>
           <div className="relative flex lg:flex-col">
@@ -76,7 +76,7 @@ function Feature() {
 
       {/* Floating Gradient Blob */}
       <Blob className="absolute left-[0px] top-[600px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-pink-500 opacity-10 blur-3xl lg:block" />
-      <Blob className="absolute right-[0px] top-[600px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-blue-500 opacity-10 blur-3xl lg:block" />
+      <Blob className="absolute right-[0px] top-[300px] z-[-10] hidden h-[500px] w-[500px] rounded-full bg-blue-500 opacity-10 blur-3xl lg:block" />
     </div>
   );
 }
