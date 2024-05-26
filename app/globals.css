@@ -47,4 +47,22 @@ html {
 
         scrollbar-width: none;
     }
+
+    .text-area-scrollbar::-webkit-scrollbar {
+        /* Customize the scrollbar width */
+        width: 10px;
+    }
+
+    .text-area-scrollbar::-webkit-scrollbar-track {
+        /* Customize the scrollbar track */
+        background: #eeeeee;
+        border-radius: 150px;
+    }
+
+    .text-area-scrollbar::-webkit-scrollbar-thumb {
+        /* Customize the scrollbar thumb */
+        background: #ff88d7;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
