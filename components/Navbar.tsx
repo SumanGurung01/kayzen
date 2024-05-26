@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Kayzen from "@/assets/kayzen-assets/logo.png";
 import { Menu, MoonStar, Sun, X } from "lucide-react";
+import Link from "next/link";
 
 {
   /*list of links in navbar*/
@@ -54,9 +55,12 @@ function Navbar() {
           id="navbar-buttons-text"
           className="md:center lg:center hidden gap-4"
         >
-          <button className="w-36 rounded-xl border-2 border-pink-500 py-2">
+          <Link
+            href="/dashboard"
+            className="center w-36 rounded-xl border-2 border-pink-500 py-2"
+          >
             Start a free trial
-          </button>
+          </Link>
           <button className="active:bg-gradient-active bg-gradient w-36 rounded-xl py-2 text-zinc-100">
             Sign In
           </button>

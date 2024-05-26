@@ -7,6 +7,7 @@ import HeroGif from "@/assets/hero-assets/hero.gif";
 import Company from "@/assets/trusted-company-assets/smart-it-logo.png";
 
 import { features } from "@/utlis/constant";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -35,7 +36,7 @@ function Hero() {
                 className="center mr-4 items-start gap-1 md:mr-8"
                 key={feature}
               >
-                <CircleCheck size={16} className="" />
+                <CircleCheck size={16} />
                 <p>{feature}</p>
               </div>
             ))}
@@ -43,9 +44,12 @@ function Hero() {
 
           {/* hero buttons */}
           <div className="center gap-10 lg:ml-20 lg:justify-start">
-            <button className="active:bg-gradient-active bg-gradient w-40 rounded-xl py-2 text-white">
+            <Link
+              href="/dashboard"
+              className="active:bg-gradient-active bg-gradient center w-40 rounded-xl py-2 text-white"
+            >
               Start a free trial
-            </button>
+            </Link>
 
             <button className="w-40 rounded-xl border-2 border-pink-500 bg-white py-2">
               Book a free demo
