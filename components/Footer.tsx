@@ -8,8 +8,8 @@ function Footer() {
         <div className="mb-20 lg:mb-0 lg:w-[50%]">
           <p className="gradient-text text-3xl font-bold">KAYZEN</p>
           <p className="my-6">
-            Instantly answer your visitors' questions with a personalized
-            chatbot trained on your website content.
+            Instantly answer your visitors questions with a personalized chatbot
+            trained on your website content.
           </p>
         </div>
         <div className="flex gap-10 lg:w-[50%]">

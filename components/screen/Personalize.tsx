@@ -5,8 +5,8 @@ function Personalize() {
   return (
     <main className="center flex-col">
       <h1 className="mb-20 mt-0 w-full max-w-xl text-center text-3xl font-bold md:text-4xl lg:mt-10">
-        You're <span className="gradient-text">three easy steps </span>away from
-        your own personalized AI support chatbot
+        You&apos;re <span className="gradient-text">three easy steps </span>away
+        from your own personalized AI support chatbot
       </h1>
 
       {/* map through each personalization steps and display personalization card*/}

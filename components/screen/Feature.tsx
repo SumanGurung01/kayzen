@@ -24,7 +24,7 @@ function Feature() {
           <h1 className="mb-2 text-2xl font-semibold">Phone Agent</h1>
           <div className="relative flex lg:flex-col">
             <p className="w-[60%] text-lg lg:w-full">
-              Kayzen's AI acts as your sales agent, managing calls and
+              Kayzen&apos;s AI acts as your sales agent, managing calls and
               initiating outreach to ensure no customer is missed.
             </p>
             <Image

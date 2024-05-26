@@ -63,6 +63,7 @@ function Dashboard() {
               <div
                 className={`bg-zinc-40 center my-2 cursor-pointer justify-start gap-4 rounded-xl  p-4 text-lg ${selectedOption === option.title ? "bg-gradient text-gray-100" : ""}`}
                 onClick={() => handleSelect(option.title)}
+                key={option.title}
               >
                 {option.image}
                 <p>{option.title}</p>
