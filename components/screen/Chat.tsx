@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, Trash } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus, Trash } from "lucide-react";
 import React, { useRef, useState } from "react";
 
 function Chat() {
@@ -28,60 +28,77 @@ function Chat() {
   ];
 
   // track the step number
-  const [step, setStep] = useState<number>(1);
+  const [step, setStep] = useState<number>(0);
 
   // collecting the urls
   const [urls, setUrls] = useState<String[]>([]);
   const urlRef = useRef<HTMLInputElement | null>(null);
 
   return (
-    <div className="flex">
-      <div className="flex-1">
-        <div id="progress" className={`h-2 bg-pink-500 ${progress[step]}`} />
+    <div className="text-md flex">
+      <div className="no-scrollbar h-screen flex-1 overflow-y-scroll">
+        <div
+          id="progress"
+          className={`h-1 bg-pink-500 ${progress[step]} ${step === 0 ? "hidden" : ""}`}
+        />
+        <div className={`center h-screen ${step !== 0 ? "hidden" : ""}`}>
+          <button
+            className="center bg-gradient gap-4 rounded-xl p-2 px-4 text-zinc-50"
+            onClick={() => setStep(1)}
+          >
+            <Plus size={18} />
+            Create a new Chatbot
+          </button>
+        </div>
 
-        <div className="p-10">
+        <div className={`p-10 ${step === 0 ? "hidden" : ""}`}>
           {/* Step 1 */}
 
           <div
             id="step-1"
-            className={`w-full max-w-[600px] rounded-lg bg-white p-10 ${step !== 1 ? "hidden" : ""}`}
+            className={`w-full max-w-[600px] rounded-lg bg-white p-6 ${step !== 1 ? "hidden" : ""}`}
           >
-            <p className="text-3xl font-bold">Create a Bot</p>
+            <p className="text-2xl font-bold">Create a Bot</p>
 
             <br></br>
-            <br></br>
 
-            <p className="my-2 text-xl font-bold">Bot Name</p>
+            <p className="my-2 font-bold">Bot Name</p>
             <input
               type="text"
               placeholder="Enter a name"
-              className="w-full rounded-xl border-2 border-zinc-500 p-4 outline-none"
+              className="w-full rounded-xl border-2 border-zinc-300 p-2 outline-none"
             />
 
             <br></br>
             <br></br>
 
-            <p className="my-2 text-xl font-bold">Description</p>
-            <textarea className="text-area-scrollbar h-40 w-full rounded-xl border-2 border-zinc-500 p-4 outline-none" />
+            <p className="my-2 font-bold">Description</p>
+            <textarea className="text-area-scrollbar h-40 w-full rounded-xl border-2 border-zinc-300 p-2 outline-none" />
 
             <br></br>
             <br></br>
 
-            <p className="my-2 text-xl font-bold">Prompt</p>
+            <p className="my-2 font-bold">Prompt</p>
             <input
               type="text"
               placeholder="Example: you are a sales agent, talk persuasively and respond to the answers politely"
-              className="w-full rounded-xl border-2 border-zinc-500 p-4 outline-none"
+              className="w-full rounded-xl border-2 border-zinc-300 p-2 outline-none"
             />
 
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
 
-            <div className="center justify-end">
+            <div className="center justify-between">
               <button
-                className="center bg-gradient gap-2 rounded-lg p-2 pl-4 text-lg font-bold text-white"
+                className="center bg-gradient gap-2 rounded-lg p-1 pr-4 text-white"
+                onClick={() => setStep(0)}
+              >
+                <ChevronLeft size={16} /> Back
+              </button>
+
+              <button
+                className="center bg-gradient gap-2 rounded-lg p-1 pl-4 text-white"
                 onClick={() => setStep(2)}
               >
                 Next <ChevronRight size={16} />
@@ -92,11 +109,11 @@ function Chat() {
           {/* Step 2 */}
           <div
             id="step-2"
-            className={`w-full max-w-[600px] rounded-lg bg-white p-10 ${step !== 2 ? "hidden" : ""}`}
+            className={`w-full max-w-[600px] rounded-lg bg-white p-6 ${step !== 2 ? "hidden" : ""}`}
           >
-            <p className="my-2 text-xl font-bold">Data Source</p>
+            <p className="text-2xl font-bold">Data Source</p>
 
-            <div className="center w-full flex-col rounded-xl border-2 border-zinc-500 p-4 py-10">
+            <div className="center ssp-4 my-2 w-full flex-col rounded-xl border-2 border-zinc-300 py-10">
               <p className="font-bold">Drag & Drop any Document</p>
 
               <p className="my-4 text-zinc-500">
@@ -107,20 +124,19 @@ function Chat() {
 
               <label
                 htmlFor="actual-btn"
-                className="bg-gradient cursor-pointer rounded-lg px-4 py-2 font-bold text-white"
+                className="bg-gradient cursor-pointer rounded-lg px-4 py-2 text-sm text-white"
               >
                 Choose File
               </label>
             </div>
 
             <br></br>
-            <br></br>
 
-            <p className="my-2 text-xl font-bold">URLs</p>
+            <p className="my-2 font-bold">URLs</p>
 
             <input
               type="text"
-              className="w-full rounded-xl border-2 border-zinc-500 p-4 outline-none"
+              className="w-full rounded-xl border-2 border-zinc-300 p-2 outline-none"
               placeholder="https://example.com"
               ref={urlRef}
               onKeyDown={(e) => {
@@ -155,28 +171,27 @@ function Chat() {
             <br></br>
             <br></br>
 
-            <p className="my-2 text-xl font-bold">Prompt</p>
+            <p className="my-2 font-bold">Prompt</p>
             <input
               type="text"
               placeholder="Example: you are a sales agent, talk persuasively and respond to the answers politely"
-              className="w-full rounded-xl border-2 border-zinc-500 p-4 outline-none"
+              className="w-full rounded-xl border-2 border-zinc-300 p-2 outline-none"
             />
 
-            <br></br>
             <br></br>
             <br></br>
             <br></br>
 
             <div className="center justify-between">
               <button
-                className="center bg-gradient gap-2 rounded-lg p-2 pr-4 text-lg font-bold text-white"
+                className="center bg-gradient gap-2 rounded-lg p-1 pr-4 text-white"
                 onClick={() => setStep(1)}
               >
                 <ChevronLeft size={16} /> Back
               </button>
 
               <button
-                className="center bg-gradient gap-2 rounded-lg p-2 pl-4 text-lg font-bold text-white"
+                className="center bg-gradient gap-2 rounded-lg p-1 pl-4 text-white"
                 onClick={() => setStep(3)}
               >
                 Next <ChevronRight size={16} />
@@ -188,35 +203,33 @@ function Chat() {
 
           <div
             id="step-3"
-            className={`w-full max-w-[600px] rounded-lg bg-white p-10 ${step !== 3 ? "hidden" : ""}`}
+            className={`w-full max-w-[600px] rounded-lg bg-white p-6 ${step !== 3 ? "hidden" : ""}`}
           >
-            <p className="my-2 text-xl font-bold">Deploy</p>
+            <p className="text-2xl font-bold">Deploy</p>
 
             <div className="center w-full flex-col rounded-xl p-4 py-10">
-              <button className="bg-gradient rounded-xl p-2 px-4 text-white">
+              <button className="bg-gradient rounded-lg p-1 px-4 text-white">
                 Preview
               </button>
             </div>
 
             <br></br>
-            <br></br>
 
-            <p className="my-2 text-xl font-bold">Embedded Code</p>
-            <textarea className="text-area-scrollbar h-40 w-full rounded-xl border-2 border-zinc-500 p-4 outline-none" />
+            <p className="my-2 font-bold">Embedded Code</p>
+            <textarea className="text-area-scrollbar h-40 w-full rounded-xl border-2 border-zinc-300 p-2 outline-none" />
 
-            <br></br>
             <br></br>
             <br></br>
             <br></br>
 
             <div className="center justify-between">
               <button
-                className="center bg-gradient gap-2 rounded-lg p-2 pr-4 text-lg font-bold text-white"
+                className="center bg-gradient gap-2 rounded-lg p-1 pr-4 text-white"
                 onClick={() => setStep(2)}
               >
                 <ChevronLeft size={16} /> Back
               </button>
-              <button className="center bg-gradient gap-2 rounded-lg p-2 px-4 text-lg font-bold text-white">
+              <button className="center bg-gradient gap-2 rounded-lg p-1 px-4 text-white">
                 Save
               </button>
             </div>
@@ -225,19 +238,24 @@ function Chat() {
       </div>
 
       {/* Setup Progress */}
-      <div className="h-screen w-full max-w-[30%] bg-white p-4">
-        <p className="my-5 text-3xl font-bold">Setup Progress</p>
+      <div
+        className={`no-scrollbar h-screen w-full max-w-[250px] overflow-y-scroll bg-white p-4 ${step === 0 ? "hidden" : ""}`}
+      >
+        <p className="my-6 text-2xl font-bold">Setup Progress</p>
         {progressSteps.map((progress, index) => {
           return (
-            <div key={progress.title} className="mb-10">
-              <p className="my-2 text-2xl">
+            <div
+              key={progress.title}
+              className="border-b-2 border-zinc-200 py-6"
+            >
+              <p className="my-2">
                 {index + 1}. {progress.title}
               </p>
 
               {progress.steps.map((s) => {
                 if (index + 1 <= step) {
                   return (
-                    <p className="my-2 ml-8 text-xl text-zinc-500" key={s}>
+                    <p className="text-md my-2 ml-6 text-zinc-500" key={s}>
                       {s}
                     </p>
                   );
@@ -245,7 +263,7 @@ function Chat() {
 
                 return (
                   <div
-                    className="my-4 ml-8 h-6 rounded-xl bg-zinc-100"
+                    className="my-4 ml-4 h-6 rounded-xl bg-zinc-100"
                     key={s}
                   />
                 );
